@@ -35,8 +35,8 @@
                         <a href="#">
                             <img src="../../imagens/celular.jpg">
                             <figcaption>Smartphone Microsoft Lumia 535, Quad Core, Windows, Tela 5´, 8GB, 5MP, 3.5G, Dual Chip, Desbloqueado - Preto</figcaption>
-                            <input type="submit" value="Adicionar no carrinho">
                         </a>
+                        <input type="submit" value="Adicionar no carrinho">
                     </figure>
                 </li>           
                 <li>
@@ -44,8 +44,8 @@
                         <a href="#">
                             <img src="../../imagens/celular.jpg">
                             <figcaption>Smartphone Microsoft Lumia 535, Quad Core, Windows, Tela 5´, 8GB, 5MP, 3.5G, Dual Chip, Desbloqueado - Preto</figcaption>
-                            <input type="submit" value="Adicionar no carrinho">
                         </a>
+                        <input type="submit" value="Adicionar no carrinho">
                     </figure>
                 </li>
                 <li>
@@ -53,8 +53,8 @@
                         <a href="#">
                             <img src="../../imagens/celular.jpg">
                             <figcaption>Smartphone Microsoft Lumia 535, Quad Core, Windows, Tela 5´, 8GB, 5MP, 3.5G, Dual Chip, Desbloqueado - Preto</figcaption>
-                            <input type="submit" value="Adicionar no carrinho">
                         </a>
+                        <input type="submit" value="Adicionar no carrinho">
                     </figure>
                 </li>
                 <li>
@@ -62,8 +62,8 @@
                         <a href="#">
                             <img src="../../imagens/celular.jpg">
                             <figcaption>Smartphone Microsoft Lumia 535, Quad Core, Windows, Tela 5´, 8GB, 5MP, 3.5G, Dual Chip, Desbloqueado - Preto</figcaption>
-                            <input type="submit" value="Adicionar no carrinho">
                         </a>
+                        <input type="submit" value="Adicionar no carrinho">
                     </figure>
                 </li>
             </ul>
