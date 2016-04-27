@@ -6,7 +6,7 @@
         <link rel="stylesheet" type="text/css" href="../../estilo-index.css">
     </head>
     <body>
-        <div class="topo">
+        <header class="cabecalho">
             <div class="logo">
                 <img src="../../imagens/simbolo-loja.png">
                 <span>Minha loja</span>
@@ -20,12 +20,11 @@
                 <a href="#">Entre</a> ou <a href="#">Cadastra-se</a>
             </div>
             <input type="search" placeholder="procurar">
-        </div>
-        <div class="menu">
+        </header>
+        <nav class="navegacao">
             <a href="#">Vitrine</a> | <a href="#">DVDs</a> | <a href="#">Livros</a> | <a href="#">CDs</a>
-        </div>
-
-        <div class="conteudo">
+        </nav>
+        <article class="conteudo">
             <nav>
                 <a href="#">Home</a> > <a href="#">...</a>
             </nav>
@@ -67,6 +66,6 @@
                     </figure>
                 </li>
             </ul>
-        </div>
+        </article>
     </body>
 </html>
