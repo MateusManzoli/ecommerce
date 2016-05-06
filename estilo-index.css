@@ -64,7 +64,8 @@ and open the template in the editor.
     border: 1px solid black;
 }
 .conteudo figcaption{
-    width: 250px;
+    width: 240px;
+    text-align: left;
 }
 .conteudo li img {
     padding-left: 16%;

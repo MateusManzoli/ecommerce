@@ -7,7 +7,7 @@
             <nav>
                 <a href="#">Home</a> > <a href="#">...</a>
             </nav>
-            <ul>                         
+            <ul>               
                 <li>
                     <figure>
                         <a href="#">
@@ -20,8 +20,8 @@
                 <li>
                     <figure>
                         <a href="#">
-                            <img src="../../imagens/guerra_dos_tronos.jpg">
-                            <figcaption>Uma verdadeira obra de arte, trazendo o melhor que o gênero pode oferecer.Uma história de lordes e damas, soldados e mercenários, assassinos e bastardos que se juntam em um tempo de presságios malignos.</figcaption>
+                            <img src="../../imagens/bigbang.jpg">
+                            <figcaption>Smartphone Microsoft Lumia 535, Quad Core, Windows, Tela 5´, 8GB, 5MP, 3.5G, Dual Chip, Desbloqueado - Preto</figcaption>
                         </a>
                         <input type="submit" value="Adicionar no carrinho">
                     </figure>
@@ -29,21 +29,21 @@
                 <li>
                     <figure>
                         <a href="#">
-                            <img src="../../imagens/cd_sertanenjo.jpg">
+                            <img src="../../imagens/bigbang.jpg">
                             <figcaption>Smartphone Microsoft Lumia 535, Quad Core, Windows, Tela 5´, 8GB, 5MP, 3.5G, Dual Chip, Desbloqueado - Preto</figcaption>
                         </a>
                         <input type="submit" value="Adicionar no carrinho">
                     </figure>
-                </li> 
+                </li>
                 <li>
                     <figure>
                         <a href="#">
-                            <img src="../../imagens/celular.jpg">
+                            <img src="../../imagens/bigbang.jpg">
                             <figcaption>Smartphone Microsoft Lumia 535, Quad Core, Windows, Tela 5´, 8GB, 5MP, 3.5G, Dual Chip, Desbloqueado - Preto</figcaption>
                         </a>
                         <input type="submit" value="Adicionar no carrinho">
                     </figure>
-                </li>  
+                </li>
             </ul>
         </article>
     </body>
