@@ -3,7 +3,7 @@
 //faz a canexao com o BD
 //$conn = new PDO('mysql:host=localhost;dbname=meuBancoDeDados', $username, $password); modelo para conexao
 function conectar() {
-    return new PDO('mysql:host=localhost;dbname=ecommerce', 'root', 'mateus123');
+    return new PDO('mysql:host=localhost;dbname=ecommerce', 'root', 'mateus2025');
 }
 
 function pesquisar($sql) {
