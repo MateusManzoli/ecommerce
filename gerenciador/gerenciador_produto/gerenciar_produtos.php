@@ -23,4 +23,8 @@ function buscarProduto($id) {
     return $produto[0];
 }
 
-
+function buscarCategorias() {
+    $sql = "SELECT  * FROM ecommerce.categoria";
+    //retorna resultados da busca
+    return pesquisar($sql);
+}

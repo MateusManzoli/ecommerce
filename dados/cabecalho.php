@@ -1,3 +1,7 @@
+<?php
+include_once '../gerenciador/gerenciador_produto/gerenciar_produtos.php';
+$categorias = buscarCategorias();
+?>
 <header class="cabecalho">
     <div class="logo">
         <img src="../../imagens/simbolo-loja.png">
@@ -14,5 +18,9 @@
     <input type="search" placeholder="procurar">
 </header>
 <nav class="navegacao">
-    <a href="../inicial/index.php">Vitrine</a> | <a href="../dvds/dvds.php">DVDs</a> | <a href="../livros/livros.php">Livros</a> | <a href="../cds/cds.php">CDs</a>| <a href="../celulares/smartphones.php">Celulares</a>
+    <?php foreach ($categorias as $categoria): ?>
+        <li style="float: left; margin-left: 15px;">
+            <a href="<?= $categoria['link'] . '?categoria=' . $categoria['id']; ?>" name="<?= $categoria['nome']; ?>" > <?= $categoria['nome']; ?></a>
+        </li>
+    <?php endforeach; ?>
 </nav>
