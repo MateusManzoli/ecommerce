@@ -1,0 +1,95 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25/04/2016, 16:07:50
+    Author     : mateus
+*/
+.cabecalho{
+    display: block;
+    background: #1A75CE; 
+    height: 70px; 
+}
+.cabecalho a{
+    padding-right: 2%;
+    color: white;
+}
+.cabecalho img {
+
+    width: 40px; 
+    float: left;
+}
+
+.cabecalho input {
+    float: right;
+}
+.cadastra-se{
+    float: right; 
+    color: white; 
+    padding-left: 3%;
+}
+.carrinho img{
+    float: right;
+    width: 30px;
+}
+.carrinho span{
+    float: right;
+    padding-right: 2%;
+    color: white;
+}
+.navegacao {
+    background: #195D9E; 
+    height: 25px; 
+    text-align: center; 
+    color: white;
+    padding-top: 1%;
+}
+.navegacao a{
+    text-decoration: none;
+    color: white;
+}
+.navegacao a:hover{
+    color: black;
+}
+.conteudo ul{
+    list-style: none;
+}
+.conteudo li {
+    border: 1px;
+    float: left; 
+    width: 300px; 
+    margin-left: 10px; 
+    border: 1px solid black;
+}
+.conteudo figcaption{
+    width: 240px;
+    text-align: left;
+}
+.conteudo li img {
+    padding-left: 16%;
+    height: 150px;
+    width: 175px;
+}
+.conteudo a{
+    color: #5294D8;
+}
+.conteudo a:hover{
+    text-decoration: none;
+}
+.navegacao {
+    padding-left: 37%;
+}
+.navegacao li {
+    float: left; 
+    margin-left: 20px;
+}
+*::-moz-selection {
+    background:#1A75CE;  /*---Cor de fundo--*/
+    color:white;   /*--cor da fonte--*/
+}
+*::selection {
+    background:#1A75CE;/*---Cor de fundo--*/
+    color:white;  /*--cor da fonte--*/
+}
