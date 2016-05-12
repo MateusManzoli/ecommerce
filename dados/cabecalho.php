@@ -19,7 +19,7 @@ $categorias = buscarCategorias();
 </header>
 <nav class="navegacao">
     <?php foreach ($categorias as $categoria): ?>
-        <li style="float: left; margin-left: 15px;">
+        <li>
             <a href="<?= $categoria['link'] . '?categoria=' . $categoria['id']; ?>" name="<?= $categoria['nome']; ?>" > <?= $categoria['nome']; ?></a>
         </li>
     <?php endforeach; ?>

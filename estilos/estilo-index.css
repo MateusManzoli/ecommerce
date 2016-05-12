@@ -78,3 +78,18 @@ and open the template in the editor.
 .conteudo a:hover{
     text-decoration: none;
 }
+.navegacao {
+    padding-left: 37%;
+}
+.navegacao li {
+    float: left; 
+    margin-left: 20px;
+}
+*::-moz-selection {
+    background:#1A75CE;  /*---Cor de fundo--*/
+    color:white;   /*--cor da fonte--*/
+}
+*::selection {
+    background:#1A75CE;/*---Cor de fundo--*/
+    color:white;  /*--cor da fonte--*/
+}

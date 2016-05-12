@@ -3,7 +3,7 @@
 //faz a canexao com o BD
 //$conn = new PDO('mysql:host=localhost;dbname=meuBancoDeDados', $username, $password); modelo para conexao
 function conectar() {
-    return new PDO('mysql:host=localhost;dbname=ecommerce', 'root', 'mateus2025');
+    return new PDO('mysql:host=localhost;dbname=ecommerce', 'root', 'mateus2025', array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''));//codifica os dados do Banco com UTF-8
 }
 
 function pesquisar($sql) {

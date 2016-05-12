@@ -1,14 +1,9 @@
 <?php
 include_once '../../gerenciador/gerenciador_produto/gerenciar_produtos.php';
-$produtos = buscarProdutos();
+$produtos = buscarProdutosVitrine();
 ?>
 <html>
     <?php include_once '../../dados/head.php'; ?>
-    <head>
-        <meta charset="uft-8">
-        <title>Ecommerce</title>
-        <link rel="stylesheet" type="text/css" href="../../estilo-index.css">
-    </head>
     <body>
         <?php include_once '../../dados/cabecalho.php'; ?>
         <article class="conteudo">
@@ -22,7 +17,7 @@ $produtos = buscarProdutos();
                             <a href="../produto/pagina_venda.php?id=<?php echo $produto['id']; ?>">
                                 <img src="<?php echo $produto['imagem']; ?>">
                                 <figcaption>
-                                    <?php echo $produto['descricao']; ?>
+                                    <?php echo substr($produto['descricao'], 0, 80); ?> <b>....</b>
                                     <p>R$: <?php echo $produto['valor']; ?></p>
                                 </figcaption>
                             </a>

@@ -4,40 +4,20 @@ $produto = buscarProduto($_GET['id']);
 $produtos = buscarProdutos();
 ?>
 <html>
-    <head>
-        <meta charset="uft-8">
-        <meta charset="UTF-8">
-        <title>Ecommerce</title>
-        <link rel="stylesheet" type="text/css" href="../../estilo-index.css">
-    </head>
+    <?php include_once '../../dados/head.php'; ?>
     <body>
-        <header class="cabecalho">
-            <div class="logo">
-                <img src="../../imagens/simbolo-loja.png">
-                <span>Minha loja</span>
-            </div>
-            <div class="carrinho">
-                <span>1 item</span>
-                <img src="../../imagens/carrinho.png">
-
-            </div>
-            <div class="cadastra-se"> 
-                <a href="#">Entre</a> ou <a href="#">Cadastra-se</a>
-            </div>
-            <input type="search" placeholder="procurar">
-        </header>
-        <nav class="navegacao">
-            <a href="#">Vitrine</a> | <a href="#">DVDs</a> | <a href="#">Livros</a> | <a href="#">CDs</a>
-        </nav>
+        <?php include_once '../../dados/cabecalho.php'; ?>
         <article class="conteudo">
             <nav>
                 <a href="#">Home</a> > <a href="#">...</a>
             </nav>
-            <strong><p style=" padding: 2%; font-size: 2em;font-family: sans-serif; color: #195D9E;"><?php echo $produto['descricao']; ?></p></strong>
-            <img src="<?php echo $produto['imagem']; ?>" style="float: left; width: 350px;padding-left: 3%;">
-
-            <div class="informarcoes_compra" style="float: left; padding-left: 20%;">
-                <p style="font-size: 2em; color: #195D9E; ">R$ <?php echo $produto['valor']; ?></p>
+            <div class="nome_produto">
+                <strong><p><?php echo $produto['nome']; ?></p></strong>
+                <img src="<?php echo $produto['imagem']; ?>">
+            </div>
+            <div class="informarcoes_compra">
+                <p class="descricao"><?php echo $produto['descricao']; ?></p>
+                <p class="valor"><?php echo $produto['valor']; ?></p>
                 <p>
                     <strong>Parcelas:</strong>
                     <select>
@@ -56,9 +36,9 @@ $produtos = buscarProdutos();
                     </select>
                 </p>
             </div>
-            <div class="comprar" style="padding-right: 10%;">
-                <input type="submit" value="COMPRAR" style="background:#1A75CE; color:white; width: 10%; height: 5%; float: right;"><br><br><br>
-                <input type="text" placeholder="Digite seu CEP" style="float: right;">
+            <div class="comprar">
+                <input class="botao" type="submit" value="COMPRAR"><br><br><br>
+                <input class="cep" type="text" placeholder="Digite seu CEP">
             </div>
         </article>
     </body>
