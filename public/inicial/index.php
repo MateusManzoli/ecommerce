@@ -1,6 +1,13 @@
 <?php
 include_once '../../gerenciador/gerenciador_produto/gerenciar_produtos.php';
-$produtos = buscarProdutos();
+
+if (isset($_POST['pesquisa'])) {
+    $produtos = buscarProdutoPorPesquisa($_POST['pesquisa']);
+} elseif ($_GET['categoria']) {
+    $produtos = buscarProdutosPorCategoria($_GET['categoria']);
+} else {
+    $produtos = buscarProdutos();
+}
 ?>
 <html>
     <?php include_once '../../dados/head.php'; ?>
@@ -15,10 +22,10 @@ $produtos = buscarProdutos();
                     <li>
                         <figure>
                             <a href="../produto/pagina_venda.php?id=<?php echo $produto['id']; ?>">
-                                <img src="<?php echo $produto['imagem']; ?>">
+                                <img src="<?= $produto['imagem']; ?>">
                                 <figcaption>
-                                    <?php echo substr($produto['descricao'], 0, 80); ?> <b>....</b>
-                                    <p>R$: <?php echo $produto['valor']; ?></p>
+                                    <?= substr($produto['descricao'], 0, 80); ?> <b>....</b>
+                                    <p>R$: <?= number_format($produto['valor'], 2, ',', '.'); ?></p>
                                 </figcaption>
                             </a>
                             <input type="submit" value="Adicionar no carrinho">

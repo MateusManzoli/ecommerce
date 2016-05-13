@@ -15,12 +15,17 @@ $categorias = buscarCategorias();
     <div class="cadastra-se"> 
         <a href="#">Entre</a> ou <a href="#">Cadastra-se</a>
     </div>
-    <input type="search" placeholder="procurar">
+    <form class="pesquisa" action="../inicial/index.php" method="post">
+        <input type="search" placeholder="procurar" name="pesquisa">
+    </form>
 </header>
 <nav class="navegacao">
+    <li>
+        <a href="../inicial/index.php">Inicial</a>
+    </li>
     <?php foreach ($categorias as $categoria): ?>
         <li>
-            <a href="<?= $categoria['link'] . '?categoria=' . $categoria['id']; ?>" name="<?= $categoria['nome']; ?>" > <?= $categoria['nome']; ?></a>
+            <a href="<?= '../inicial/index.php?categoria=' . $categoria['id']; ?>" name="<?= $categoria['nome']; ?>" > <?= $categoria['nome']; ?></a>
         </li>
     <?php endforeach; ?>
 </nav>

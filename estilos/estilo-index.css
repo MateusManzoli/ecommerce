@@ -57,12 +57,11 @@ and open the template in the editor.
     list-style: none;
 }
 .conteudo li {
-    border: 1px;
     float: left; 
     width: 300px; 
     margin-left: 10px;
     margin-bottom: 10px;
-    border: 1px solid black;
+    border: 1px solid #1A75CE;
 }
 .conteudo figcaption{
     width: 240px;
@@ -74,7 +73,7 @@ and open the template in the editor.
     width: 175px;
 }
 .conteudo a{
-    color: #5294D8;
+    color: #195D9E;
 }
 .conteudo a:hover{
     text-decoration: none;
