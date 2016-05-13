@@ -60,7 +60,8 @@ and open the template in the editor.
     border: 1px;
     float: left; 
     width: 300px; 
-    margin-left: 10px; 
+    margin-left: 10px;
+    margin-bottom: 10px;
     border: 1px solid black;
 }
 .conteudo figcaption{

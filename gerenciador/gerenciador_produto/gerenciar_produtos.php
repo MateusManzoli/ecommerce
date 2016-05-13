@@ -10,13 +10,6 @@ function buscarProdutos() {
     return pesquisar($sql);
 }
 
-function buscarProdutosVitrine() {
-    //metodo para buscar noticas
-    $sql = "SELECT  * FROM ecommerce.produto where vitrine = 1";
-    //retorna resultados da busca
-    return pesquisar($sql);
-}
-
 function buscarProdutosPorCategoria($categoria) {
     //metodo para buscar noticas
     $sql = "SELECT * FROM ecommerce.produto where categoria_id = $categoria order by id desc limit 18 ";

@@ -1,6 +1,6 @@
 <?php
 include_once '../../gerenciador/gerenciador_produto/gerenciar_produtos.php';
-$produtos = buscarProdutosVitrine();
+$produtos = buscarProdutos();
 ?>
 <html>
     <?php include_once '../../dados/head.php'; ?>
