@@ -34,3 +34,10 @@ function buscarProdutoPorPesquisa($pesquisa) {
     $sql = "select * from ecommerce.produto where nome like '%{$pesquisa}%' or descricao like '%{$pesquisa}%'";
     return pesquisar($sql);
 }
+
+function buscarProdutosVitrine() {
+    //metodo para buscar noticas
+    $sql = "SELECT  * FROM ecommerce.produto where vitrine = 1 order by id desc limit 18 ";
+    //retorna resultados da busca
+    return pesquisar($sql);
+}

@@ -6,7 +6,7 @@ if (isset($_POST['pesquisa'])) {
 } elseif ($_GET['categoria']) {
     $produtos = buscarProdutosPorCategoria($_GET['categoria']);
 } else {
-    $produtos = buscarProdutos();
+    $produtos = buscarProdutosVitrine();
 }
 ?>
 <html>
@@ -15,7 +15,7 @@ if (isset($_POST['pesquisa'])) {
         <?php include_once '../dados/cabecalho.php'; ?>
         <article class="conteudo">
             <nav>
-                <a href="#">Home</a> > <a href="#">...</a>
+                <a href="index.php">Home</a> > <a href="#">...</a>
             </nav>
             <ul> 
                 <?php foreach ($produtos as $produto) { ?>
