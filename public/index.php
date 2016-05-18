@@ -1,70 +1,37 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>Ecommerce</title>
-        <link rel="stylesheet" type="text/css" href="../../estilo-index.css">
-    </head>
-    <body>
-        <header class="cabecalho">
-            <div class="logo">
-                <img src="../../imagens/simbolo-loja.png">
-                <span>Minha loja</span>
-            </div>
-            <div class="carrinho">
-                <span>1 item</span>
-                <img src="../../imagens/carrinho.png">
+<?php
+include_once __DIR__ . '/../gerenciador/gerenciador_produto/gerenciar_produtos.php';
 
-            </div>
-            <div class="cadastra-se"> 
-                <a href="#">Entre</a> ou <a href="#">Cadastra-se</a>
-            </div>
-            <input type="search" placeholder="procurar">
-        </header>
-        <nav class="navegacao">
-            <a href="#">Vitrine</a> | <a href="#">DVDs</a> | <a href="#">Livros</a> | <a href="#">CDs</a>
-        </nav>
+if (isset($_POST['pesquisa'])) {
+    $produtos = buscarProdutoPorPesquisa($_POST['pesquisa']);
+} elseif ($_GET['categoria']) {
+    $produtos = buscarProdutosPorCategoria($_GET['categoria']);
+} else {
+    $produtos = buscarProdutos();
+}
+?>
+<html>
+    <?php include_once '../dados/head.php'; ?>
+    <body>
+        <?php include_once '../dados/cabecalho.php'; ?>
         <article class="conteudo">
             <nav>
                 <a href="#">Home</a> > <a href="#">...</a>
             </nav>
-            <ul>               
-                <li>
-                    <figure>
-                        <a href="#">
-                            <img src="../../imagens/celular.jpg">
-                            <figcaption>Smartphone Microsoft Lumia 535, Quad Core, Windows, Tela 5´, 8GB, 5MP, 3.5G, Dual Chip, Desbloqueado - Preto</figcaption>
-                        </a>
-                        <input type="submit" value="Adicionar no carrinho">
-                    </figure>
-                </li>           
-                <li>
-                    <figure>
-                        <a href="#">
-                            <img src="../../imagens/celular.jpg">
-                            <figcaption>Smartphone Microsoft Lumia 535, Quad Core, Windows, Tela 5´, 8GB, 5MP, 3.5G, Dual Chip, Desbloqueado - Preto</figcaption>
-                        </a>
-                        <input type="submit" value="Adicionar no carrinho">
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <a href="#">
-                            <img src="../../imagens/celular.jpg">
-                            <figcaption>Smartphone Microsoft Lumia 535, Quad Core, Windows, Tela 5´, 8GB, 5MP, 3.5G, Dual Chip, Desbloqueado - Preto</figcaption>
-                        </a>
-                        <input type="submit" value="Adicionar no carrinho">
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <a href="#">
-                            <img src="../../imagens/celular.jpg">
-                            <figcaption>Smartphone Microsoft Lumia 535, Quad Core, Windows, Tela 5´, 8GB, 5MP, 3.5G, Dual Chip, Desbloqueado - Preto</figcaption>
-                        </a>
-                        <input type="submit" value="Adicionar no carrinho">
-                    </figure>
-                </li>
+            <ul> 
+                <?php foreach ($produtos as $produto) { ?>
+                    <li>
+                        <figure>
+                            <a href="../produto/pagina_venda.php?id=<?php echo $produto['id']; ?>">
+                                <img src="<?= $produto['imagem']; ?>">
+                                <figcaption>
+                                    <?= substr($produto['descricao'], 0, 80); ?> <b>....</b>
+                                    <p>R$: <?= number_format($produto['valor'], 2, ',', '.'); ?></p>
+                                </figcaption>
+                            </a>
+                            <input type="submit" value="Adicionar no carrinho">
+                        </figure>
+                    </li>
+                <?php } ?>
             </ul>
         </article>
     </body>
