@@ -1,0 +1,79 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 25/04/2016, 16:07:50
+    Author     : mateus
+*/
+.cabecalho{
+    display: block;
+    background: #1A75CE; 
+    height: 70px; 
+}
+.cabecalho a{
+    padding-right: 2%;
+    color: white;
+}
+.cabecalho img {
+
+    width: 40px; 
+    float: left;
+}
+
+.cabecalho input {
+    float: right;
+}
+.cadastra-se{
+    float: right; 
+    color: white; 
+    padding-left: 3%;
+}
+.carrinho img{
+    float: right;
+    width: 30px;
+}
+.carrinho span{
+    float: right;
+    padding-right: 2%;
+    color: white;
+}
+.navegacao {
+    background: #195D9E; 
+    height: 25px; 
+    text-align: center; 
+    color: white;
+    padding-top: 1%;
+}
+.navegacao a{
+    text-decoration: none;
+    color: white;
+}
+.navegacao a:hover{
+    color: black;
+}
+.conteudo ul{
+    list-style: none;
+}
+.conteudo li {
+    border: 1px;
+    float: left; 
+    width: 300px; 
+    margin-left: 10px; 
+    border: 1px solid black;
+}
+.conteudo figcaption{
+    width: 250px;
+}
+.conteudo li img {
+    padding-left: 16%;
+    height: 150px;
+    width: 175px;
+}
+.conteudo a{
+    color: #5294D8;
+}
+.conteudo a:hover{
+    text-decoration: none;
+}

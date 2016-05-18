@@ -1,6 +1,6 @@
 <?php
 
-include_once '../../conexao/con.php';
+include_once __DIR__ . '/../../conexao/con.php';
 
 //funcao para buscar noticias
 function buscarProdutos() {
@@ -32,5 +32,12 @@ function buscarProdutosPorCategoria($categoria) {
 function buscarProdutoPorPesquisa($pesquisa) {
     // manchete passado no pesquisa nao esta correto pois o nome do formulario de pesquisa era "pesquisa"
     $sql = "select * from ecommerce.produto where nome like '%{$pesquisa}%' or descricao like '%{$pesquisa}%'";
+    return pesquisar($sql);
+}
+
+function buscarProdutosVitrine() {
+    //metodo para buscar noticas
+    $sql = "SELECT  * FROM ecommerce.produto where vitrine = 1 order by id desc limit 18 ";
+    //retorna resultados da busca
     return pesquisar($sql);
 }

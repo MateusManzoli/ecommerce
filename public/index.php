@@ -1,21 +1,21 @@
 <?php
-include_once '../../gerenciador/gerenciador_produto/gerenciar_produtos.php';
+include_once __DIR__ . '/../gerenciador/gerenciador_produto/gerenciar_produtos.php';
 
 if (isset($_POST['pesquisa'])) {
     $produtos = buscarProdutoPorPesquisa($_POST['pesquisa']);
 } elseif ($_GET['categoria']) {
     $produtos = buscarProdutosPorCategoria($_GET['categoria']);
 } else {
-    $produtos = buscarProdutos();
+    $produtos = buscarProdutosVitrine();
 }
 ?>
 <html>
-    <?php include_once '../../dados/head.php'; ?>
+    <?php include_once '../dados/head.php'; ?>
     <body>
-        <?php include_once '../../dados/cabecalho.php'; ?>
+        <?php include_once '../dados/cabecalho.php'; ?>
         <article class="conteudo">
             <nav>
-                <a href="#">Home</a> > <a href="#">...</a>
+                <a href="index.php">Home</a> > <a href="#">...</a>
             </nav>
             <ul> 
                 <?php foreach ($produtos as $produto) { ?>
