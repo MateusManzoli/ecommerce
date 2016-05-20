@@ -54,6 +54,7 @@ and open the template in the editor.
     color: black;
 }
 .conteudo ul{
+    padding-top: 2%;
     list-style: none;
 }
 .conteudo li {
@@ -76,6 +77,7 @@ and open the template in the editor.
     color: #195D9E;
 }
 .conteudo a:hover{
+    color:#1A75CE;
     text-decoration: none;
 }
 .navegacao {

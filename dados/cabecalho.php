@@ -25,7 +25,7 @@ $categorias = buscarCategorias();
     </li>
     <?php foreach ($categorias as $categoria): ?>
         <li>
-            <a href="<?= '../index.php?categoria=' . $categoria['id']; ?>" name="<?= $categoria['nome']; ?>" > <?= $categoria['nome']; ?></a>
+            <a href="<?= '../index.php?categoria=' . $categoria['id']; ?>" name="<?= $categoria['nome']; ?>" ><?= $categoria['nome']; ?>
         </li>
     <?php endforeach; ?>
 </nav>
