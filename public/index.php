@@ -3,10 +3,8 @@ include_once __DIR__ . '/../gerenciador/gerenciador_produto/gerenciar_produtos.p
 
 if (isset($_POST['pesquisa'])) {
     $produtos = buscarProdutoPorPesquisa($_POST['pesquisa']);
-}
-
-if ($_GET['categoria']) {
-    $produtos = buscarProdutosPorCategoria($_GET['categoria'],$_GET['marca']);
+} elseif ($_GET['categoria']) {
+    $produtos = buscarProdutosPorCategoria($_GET['categoria'], $_GET['marca']);
     $submenus = buscarSubCategorias($_GET['categoria']);
 } else {
     $produtos = buscarProdutosVitrine();
