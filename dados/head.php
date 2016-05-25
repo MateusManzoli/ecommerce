@@ -1,6 +1,5 @@
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <title>Ecommerce</title>
-    <link rel="stylesheet" type="text/css" href="../../estilos/estilo-index.css">
-    <link rel="stylesheet" href="../../estilos/pagina_venda.css"
+    <link rel="stylesheet" type="text/css" href="../../css/css-index.css">
 </head>

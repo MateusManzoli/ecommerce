@@ -53,6 +53,24 @@ and open the template in the editor.
 .navegacao a:hover{
     color: black;
 }
+.navegacao-paginas{
+    color: #195D9E;
+    margin-bottom: 10px;
+}
+.navegacao-paginas a{
+    text-decoration: none;
+    color:#195D9E ;
+}
+.navegacao-paginas a:hover{
+    background: yellow;
+}
+.subMenu{
+    margin-right: 10px;
+    width: 400px;
+}
+.subMenu a:hover{
+    background: yellow;
+}
 .conteudo ul{
     padding-top: 2%;
     list-style: none;
@@ -86,6 +104,42 @@ and open the template in the editor.
 .navegacao li {
     float: left; 
     margin-left: 20px;
+}
+
+.nome_produto p {
+    padding: 2%; 
+    font-size: 2em;
+    font-family: sans-serif;
+    color: #195D9E;
+}
+.nome_produto img {
+    float: left; 
+    width: 350px;
+    padding-left: 3%;
+}
+.informarcoes_compra {
+    float: left; 
+    padding-left: 20%;
+}
+.descricao {
+    font-size: 14px; color: #195D9E; width: 350px;
+}
+.valor {
+    font-size: 2em; 
+    color: #195D9E;
+}
+.comprar {
+    padding-right: 10%;
+}
+.botao {
+    background:#1A75CE; 
+    color:white;
+    width: 10%; 
+    height: 5%; 
+    float: right;
+}
+.cep {
+    float:right;
 }
 *::-moz-selection {
     background:#1A75CE;  /*---Cor de fundo--*/

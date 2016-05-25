@@ -1,14 +1,15 @@
 <?php
-include_once '../../gerenciador/gerenciador_produto/gerenciar_produtos.php';
+include_once '../../gerenciador_de_funcoes/funcoes_produto/gerenciar_produtos.php';
 $produto = buscarProduto($_GET['id']);
 ?>
 <html>
     <?php include_once '../../dados/head.php'; ?>
     <body>
         <?php include_once '../../dados/cabecalho.php'; ?>
+        <?php include_once '../../dados/menu.php'; ?>
         <article class="conteudo">
             <nav>
-                <a href="#">Home</a> > <a href="#">...</a>
+                <a href="../index.php">Home</a> > <a href="#">...</a>
             </nav>
             <div class="nome_produto">
                 <strong><p><?= $produto['nome']; ?></p></strong>

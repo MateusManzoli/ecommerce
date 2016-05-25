@@ -19,13 +19,3 @@ $categorias = buscarCategorias();
         <input type="search" placeholder="procurar" name="pesquisa">
     </form>
 </header>
-<nav class="navegacao">
-    <li>
-        <a href="../index.php">Inicial</a>
-    </li>
-    <?php foreach ($categorias as $categoria): ?>
-        <li>
-            <a href="<?= '../index.php?categoria=' . $categoria['id']; ?>" name="<?= $categoria['nome']; ?>" ><?= $categoria['nome']; ?>
-        </li>
-    <?php endforeach; ?>
-</nav>

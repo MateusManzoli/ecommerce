@@ -14,7 +14,7 @@ function buscarProduto($id) {
 }
 
 function buscarCategorias() {
-    $sql = "SELECT  * FROM ecommerce.categoria where id <= 4";
+    $sql = "SELECT id,nome FROM ecommerce.categoria where ISNULL(categoria_id)";
     return pesquisar($sql);
 }
 
@@ -26,9 +26,9 @@ function buscarSubCategorias($idCategoria) {
 function buscarProdutosPorCategoria($categoria, $marca = null) {
     $sql = "SELECT * 
             FROM ecommerce.produto 
-            where categoria_id = $categoria  ";
+            where categoria_id = $categoria";
     if (!empty($marca)) {
-        $sql.="AND marca = '{$marca}'";
+        $sql.=" AND marca = '{$marca}'";
     }
     $sql.=" order by id desc limit 18";
     return pesquisar($sql);

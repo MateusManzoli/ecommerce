@@ -1,5 +1,5 @@
 <?php
-include_once __DIR__ . '/../gerenciador/gerenciador_produto/gerenciar_produtos.php';
+include_once __DIR__ . '/../gerenciador_de_funcoes/funcoes_produto/gerenciar_produtos.php';
 
 if (isset($_POST['pesquisa'])) {
     $produtos = buscarProdutoPorPesquisa($_POST['pesquisa']);
@@ -14,12 +14,11 @@ if (isset($_POST['pesquisa'])) {
     <?php include_once '../dados/head.php'; ?>
     <body>
         <?php include_once '../dados/cabecalho.php'; ?>
-        <nav style="margin-bottom: 10px;">
-            <a href="index.php">Home</a> > <a href="#">...</a>
-        </nav>
-        <div class="subMenu" style="margin-right: 10px; width: 400px;" name="produtoCat">
+        <?php include_once '../dados/menu.php'; ?>
+        <?php include_once '../dados/navegacao_entre_paginas.php'; ?>
+        <div class="subMenu" name="produtoCat">
             <?php foreach ($submenus as $submenu): ?>
-                <a href="<?= 'index.php?categoria=' . $submenu['categoria_id']; ?>&marca=<?= $submenu['nome']; ?>"style=" text-decoration: none; margin: 10px; color: #195D9E;" ><?= $submenu['nome']; ?>
+                <a href="<?= 'index.php?categoria=' . $submenu['categoria_id']; ?>&n=<?= $_GET['n']; ?>&marca=<?= $submenu['nome']; ?>"style=" text-decoration: none; margin: 10px; color: #195D9E;" ><?= $submenu['nome']; ?>
                 <?php endforeach; ?>
         </div>
         <article class="conteudo">
@@ -28,7 +27,7 @@ if (isset($_POST['pesquisa'])) {
                     <li>
                         <figure>
                             <a href="../produto/pagina_venda.php?id=<?php echo $produto['id']; ?>">
-                                <img src="<?= $produto['imagem']; ?>">
+                                <img src="<?= $produto['imagem']; ?>" alt="<?= $produto['nome']; ?>">
                                 <figcaption>
                                     <?= substr($produto['descricao'], 0, 80); ?> <b>....</b>
                                     <p>R$: <?= number_format($produto['valor'], 2, ',', '.'); ?></p>
